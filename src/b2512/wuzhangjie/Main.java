@@ -3,11 +3,8 @@ package b2512.wuzhangjie;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-
-        //int[] arr = new int[]{6,1,2,5,3};
-        //插入排序
-        /*for (int i=1;i<arr.length;i++){
+    public void str(int[] arr){
+        for (int i=1;i<arr.length;i++){
             for (int j=i-1;j>=0;j--){
                 if (arr[j]>arr[i]){
                     int temp = arr[j];
@@ -16,10 +13,11 @@ public class Main {
                     i--;
                 }
             }
-        }*/
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 
-        //选择排序
-        int[] arr = new int[]{6,1,2,5,3,6};
+    public void strs(int[] arr){
         for (int i=0;i<arr.length-1;i++){
             int min = i;
             for (int j=i+1;j<arr.length;j++){
@@ -34,5 +32,15 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = new int[]{6,1,2,5,3};
+        //插入排序
+        Main main = new Main();
+        main.str(arr);
+
+        main.strs(arr);
     }
 }
